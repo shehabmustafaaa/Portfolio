@@ -1,0 +1,532 @@
+/*
+  Porject : Shehab Mustafa Portfolio.
+  Version : 1.0.
+  Author : Shehab Mustafa 
+  Primary Use : Portfolio
+
+
+	Table of Content
+	
+	[00] Global
+  [01] Navbar
+  [02] Header
+  [03] About me 
+  [04] My Skills 
+  [05] My Services
+  [06] My Portfolio
+  [07] Contact us
+  [08] Footer
+  [09] Up to Top
+  [10] Loading Page
+
+*/
+
+/*========================[00] Global ========================*/
+
+body {
+	font-family: 'Raleway', sans-serif;
+	height: 2000px;
+	overflow: hidden;
+}
+
+/*scroll style*/
+body::-webkit-scrollbar {
+  width: 0.7em;
+  background: #333
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px #333;
+  box-shadow: inset 0 0 6px #333;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #ffbb06;
+  outline: 1px solid #fff;
+  border-radius: 5px;
+  width: 0.5em
+}
+
+
+p {
+	color: #333;
+	font-size: 14px;
+	font-weight: bold;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+	display: inline-block;
+	font-size: 30px;
+	position: relative;
+	padding-bottom: 20px;
+}
+
+h2::after {
+	content: '';
+	width: 60px;
+	height: 3px;
+
+	background-color: #333;
+	position: absolute;
+	bottom: 0;
+	left: calc(50% - 30px);
+}
+
+section {
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+.section-head {
+	margin-bottom: 30px;
+}
+.f-style {
+	font-family: 'Montserrat', sans-serif;
+}
+
+.button {
+	padding: 8px 30px;
+	display: inline-block;
+	margin-top: 40px;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a,
+button,
+.button {
+	cursor: pointer;
+	-webkit-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+
+/*========================[01] Navbar ========================*/
+.navbar {
+	background-color: transparent;
+	padding: 20px 0;
+	z-index: 9999;
+}
+.navbar-sticky {
+	background-color: #000 !important;
+	padding: 0;
+	position: fixed;
+	top: -100px;
+	transition: transform 0.5s;
+	transition: transform 0.5s, -webkit-transform 0.5s;
+	transition: -webkit-transform 0.5s;
+	-webkit-transition: transform 0.5s;
+	-webkit-transition: -webkit-transform 0.5s;
+	transform: translateY(100px);
+	-webkit-transform: translateY(100px);
+}
+.navbar .navbar-brand img {
+	height: 50px;
+	width: 50px;
+}
+.navbar-light .navbar-nav .nav-link {
+	color: #fff;
+}
+.navbar ul li {
+	margin-left: 30px;
+}
+
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+	color: #ffbb06;
+}
+
+.navbar-light .navbar-toggler {
+	color: #fff;
+	border: none;
+}
+
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show > .nav-link {
+	color: #ffbb06;
+}
+/* ======================== [02] Header ======================== */
+.header {
+	background: url('../img/header.jpeg') no-repeat center center;
+	background-size: cover;
+	position: relative;
+	padding: 0;
+}
+.overlay {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+.header .content {
+	padding: 10px;
+	position: absolute;
+	color: #fff;
+
+}
+
+.header .content .hello {
+	font-size: 15px;
+	color: #fff;
+	font-weight: 300;
+	letter-spacing: 8px;
+}
+.header .content span {
+	font-size: 30px;
+	color: #ffbb06;
+}
+.header .content a {
+	background-color: transparent;
+	border: 1px solid #ffbb06;
+	color: #ffbb06;
+	margin-left: 15px;
+	font-size: 17px;
+}
+
+.header .content a:hover {
+	background-color: #ffbb06;
+	color: #333;
+}
+
+/* ======================== [03] About me ======================== */
+.about-me {
+	background-color: #e9eaed;
+}
+.about-me h2::after {
+	left: 0;
+}
+.about-me a {
+	width: 25px;
+	height: 25px;
+	line-height: 25px;
+	color: #ffbb06;
+	border: 1px solid #ffbb06;
+	border-radius: 50%;
+	margin-right: 10px;
+	text-align: center;
+	display: inline-block;
+	-webkit-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+
+.about-me a:hover {
+	border: 1px solid #ffbb06;
+	color: #ffbb06;
+	background-color: #333;
+}
+.about-me .button {
+	background-color: #ffbb06;
+	color: #333;
+	border: none;
+	margin-bottom: 30px;
+}
+.about-me .button:hover {
+	background-color: #333;
+	color: #ffbb06;
+}
+
+/* ======================== [04] My Skills ======================== */
+
+.my-skills .bar-main {
+	position: relative;
+	width: 100%;
+	height: 25px;
+	background-color: #e9eaed;
+	font-size: 15px;
+	margin-bottom: 30px;
+	overflow: hidden;
+}
+.my-skills .bar-skill {
+	position: absolute;
+
+	width: 100px;
+	height: 25px;
+	background-color: #ffda76;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	text-align: center;
+	line-height: 25px;
+}
+.my-skills .bar-progress {
+	position: absolute;
+	left: 100px;
+	height: 25px;
+	background-color: #ffbb06;
+	top: 0;
+	left: 0;
+}
+
+.my-skills span {
+	position: absolute;
+	top: 3px;
+	right: 10px;
+	z-index: 2;
+}
+
+/* ======================== [05] Services ======================== */
+.my-services {
+	background-color: #e9eaed;
+}
+.my-services .service {
+	background-color: #fff;
+	padding: 20px;
+	margin-bottom: 20px;
+	-webkit-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+	cursor: pointer;
+	min-height: 220px;
+}
+.service:hover {
+	-webkit-box-shadow: 0 25px 45px rgba(0, 0, 0, 0.15);
+	        box-shadow: 0 25px 45px rgba(0, 0, 0, 0.15);
+}
+.my-services .service i {
+	color: #ffbb06;
+	margin-bottom: 10px;
+}
+.my-services .service h5 {
+	margin-bottom: 10px;
+}
+
+/* ========================  [06] Portfolio ======================== */
+
+.portfolio img {
+	max-height: 600px;
+	max-width: 100%;
+}
+.portfolio .card {
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.portfolio .card-info {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	-webkit-transition: all 0.5s ease 0s;
+	transition: all 0.5s ease 0s;
+}
+.portfolio .card:hover .card-info {
+	opacity: 1;
+}
+.portfolio .card-info .content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+.portfolio .card-info .content p {
+	color: #fff;
+	margin-bottom: 20px;
+	-webkit-transform: translate(-50%, -300%);
+	        transform: translate(-50%, -300%);
+	-webkit-transition: all 0.5s ease 0s;
+	transition: all 0.5s ease 0s;
+}
+.portfolio .card:hover .card-info p {
+	-webkit-transform: translate(-50%, -200%);
+	        transform: translate(-50%, -200%);
+}
+.portfolio .card-info .content a {
+	background-color: transparent;
+	font-size:12px;
+	border: 2px solid #ffbb06;
+	color: #ffbb06;
+	margin-top: 0;
+	-webkit-transition: all 0.5s ease 0s;
+	transition: all 0.5s ease 0s;
+	-webkit-transform: translate(-50%, -40%);
+	        transform: translate(-50%, -40%);
+}
+.portfolio .card:hover .card-info a {
+	-webkit-transform: translate(-50%, -65%);
+	        transform: translate(-50%, -65%);
+}
+.portfolio .card-info .content a:hover {
+	background-color: #ffbb06;
+	color: #333;
+}
+/*========================  [07] Contact======================== */
+.contact-me {
+	background-color: #e9eaed;
+}
+.contact-me .info {
+	background-color: #fff;
+	padding: 20px;
+	margin-bottom: 15px;
+	-webkit-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+}
+.contact-me .info:hover {
+	-webkit-box-shadow: 0 25px 45px rgba(0, 0, 0, 0.15);
+	        box-shadow: 0 25px 45px rgba(0, 0, 0, 0.15);
+}
+.contact-me .info i {
+	color: #ffbb06;
+	margin-bottom: 8px;
+}
+.contact-me .input {
+	width: 100%;
+	border: none;
+	color: #e9eaed;
+	border-bottom: 1px solid #e9eaed;
+	position: relative;
+}
+
+.contact-me .info form {
+	height: 100%;
+	padding: 5px 5px;
+}
+.contact-me .info input,
+.contact-me .info textarea {
+	border: none;
+	width: 80%;
+	height: 100%;
+	padding: 40px 0 22px;
+}
+.contact-me .info textarea {
+	height: 140px;
+}
+
+.contact-me .info .input i {
+	position: absolute;
+	top: 39px;
+	left: 6px;
+	font-size: 19px;
+}
+
+.contact-me .info button {
+	color: #333;
+	background-color: #ffbb06;
+	border: none;
+	margin: 30px 0 30px 0;
+}
+.contact-me .info button:hover {
+	color: #ffbb06;
+	background-color: #333;
+}
+/* ========================  [08] Footer ======================== */
+.footer {
+	background-color: #000;
+	color: #fff;
+	padding: 30px 0;
+}
+.footer .social-media a {
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	line-height: 25px;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	margin: 0 5px;
+	color: #fff;
+	-webkit-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+
+.footer .social-media a:hover {
+	border: 1px solid #ffbb06;
+	color: #ffbb06;
+	background-color: #000;
+}
+.footer .social-media {
+	margin-bottom: 10px;
+}
+.footer .copyright {
+	color: #aaa;
+}
+.footer .copyright a {
+	color: #ffbb06;
+}
+
+/* ======================== [09] Button to up ======================== */
+.up {
+	position: fixed;
+	right: -100px;
+	bottom: 35px;
+	color: #fff;
+	background-color: #333;
+	padding: 5px 17px;
+	font-size: 22px;
+	cursor: pointer;
+	-webkit-transition: 0.8s;
+	transition: 0.8s;
+	opacity: 0.7;
+}
+.up:hover {
+	opacity: 1;
+}
+
+/* ======================== [10] Loading page ======================== */
+
+.loading-page {
+	position: fixed;
+	background-color: #333;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 99999;
+}
+.spinner {
+	width: 60px;
+	height: 60px;
+	position: relative;
+	margin: 100px auto;
+	top: 25%;
+}
+
+.double-bounce1,
+.double-bounce2 {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background-color: #ffbb06;
+	opacity: 0.6;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	-webkit-animation: sk-bounce 2s infinite ease-in-out;
+	animation: sk-bounce 2s infinite ease-in-out;
+}
+
+.double-bounce2 {
+	-webkit-animation-delay: -1s;
+	animation-delay: -1s;
+}
+
+@-webkit-keyframes sk-bounce {
+	0%,
+	100% {
+		-webkit-transform: scale(0);
+	}
+	50% {
+		-webkit-transform: scale(1);
+	}
+}
+
+@keyframes sk-bounce {
+	0%,
+	100% {
+		transform: scale(0);
+		-webkit-transform: scale(0);
+	}
+	50% {
+		transform: scale(1);
+		-webkit-transform: scale(1);
+	}
+}
